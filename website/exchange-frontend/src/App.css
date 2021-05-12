@@ -1,0 +1,467 @@
+body {
+    background-color: #e9ebf0;
+    font-family: Helvetica, Arial;
+  
+   }
+   .header {
+    background-color: #0093d5;
+    padding: 10px;
+   }
+   .header h1 {
+    color: #fff;
+   }
+   
+   
+   
+
+   .wrapper {
+    margin-top: 50px;
+/*    background-color: #fff; */
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    height: 300px;
+    overflow: auto;
+   }
+   .wrapper p {
+    font-style: italic;
+    color: #666;
+   }
+   .wrapper label {
+    display: block;
+   }
+   .amount-input {
+    margin-bottom: 10px;
+    padding: 3px 6px;
+  
+   }
+   
+   .wrapper select {
+    display: block;
+   }
+   .button {
+    margin: 10px 2px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: #0093d5;
+    border: none;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: small;
+   }
+   .button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+   }
+
+   .wrapper hr {
+    margin: 40px auto;
+   }
+
+   
+   @media only screen and (min-width: 1400px) {
+    .wrapper {
+    width: 50%;
+    }
+    .wrapper input {
+    width: 600px;
+    height: 20px;
+    background-color: azure;
+    }
+   }
+   
+   
+   @media only screen and (max-width: 1399px) and (min-width: 750px) {
+    .wrapper {
+    width: 75%;
+    }
+    .wrapper input {
+    width: 400px;
+    }
+   }
+
+
+   .App{
+    background-color: rgb(255, 204, 255) ; 
+  /* background-color: rgb(51, 204, 204);*/
+  }
+  .login{
+    background-color: rgb(255, 204, 255) ; 
+  }
+
+  .trade .wrapper,.transact .wrapper{
+    background-color: aliceblue;
+    box-shadow: 4px 4px 4px gray;
+ 
+}
+
+   .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(153, 51, 255);
+    /*background-color: rgb(41, 41, 46); */
+  }
+   
+   .wrapper .smaller-input {
+    width: 30%;
+    font-size: 12px;
+    margin: 0px;
+  }
+  .wrapper .inline {
+      float: left;
+      margin: 5px;
+      position: relative;
+      top: -45px;
+  }
+
+  .Calculator{
+      padding: 20px;
+      height:100 px;
+
+  }
+  
+  .Calculator .outputpar{
+    font: 200px;
+    position: relative;
+    top:-15px;
+    left:20px;
+
+  }
+
+  .forDD{
+    background-color: aliceblue;
+    width: 50%;
+    display:inline-block;
+  }
+  .DDbuttons{
+    display: inline-block;
+    width: 50%;
+    background-color: blue;
+  }
+
+  
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+.table-wrapper{
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  max-height: 700px;
+  overflow-y: scroll;
+}
+
+.fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+height: 40%;
+  max-width: 100%;
+  
+  white-space: nowrap;
+  background-color: antiquewhite;
+}
+
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.fl-table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+
+
+
+
+.linktext{
+  display: block;
+  text-decoration: none;
+  color:whitesmoke;
+
+}
+
+.makein{
+  display: inline-block;
+}
+
+
+/*
+For Button
+*/
+
+.dropbtn {
+background-color: inherit;
+color: white;
+  padding: 10px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  height: fit-content;
+  margin-left: 10px;
+  margin-right: 30px;
+  position: relative;
+  display: inline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:inherit;
+  opacity: 0.5;
+}
+
+
+.headline{
+  color:blue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+/*
+.todisp{
+  float: left;
+  box-shadow: 5px 10px;
+  margin-left: 20px;
+  background-color: white;
+  width: 800px;
+  
+  background-color:bisque;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 12px 20px;
+
+}
+*/
+
+
+.outer{
+display: flex;
+flex-wrap:wrap;
+flex-direction:column;
+
+}
+
+
+
+.wrapperalt {
+  border: 0px dotted rgb(96, 139, 168);
+  margin-left: 150px;
+  width: 80%;
+}
+
+.boxrate {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin:-10px;
+  flex:100%;
+
+  
+}
+
+
+.boxb {
+  display: flex;
+  flex-wrap: wrap;
+  margin:-10px;
+  flex:100%;
+}
+
+.boxb>* {
+  flex: 1 1 160px;
+  margin: 80px;
+  min-width: 50px;
+  
+  border: 2px dotted blue;
+}
+
+.boxb div{
+background-color: darksalmon;
+
+}
+
+
+.boxrate>* {
+  flex: 1 1 160px;
+  margin: 80px;
+  min-width: 120px;
+  
+  border: 2px dotted blue;
+}
+
+.boxrate div{
+  background-color:bisque;
+}
+
+.boxtr {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin:-10px;
+  flex:100%;
+  
+}
+.boxtr>* {
+  flex: 1 1 160px;
+  margin: 50px;
+  min-width: 300px;
+  
+  
+}
+
+.boxtr div{
+  background-color: aqua;
+}
+
+
+
+@media (max-width: 600px) {
+  .todisp {
+    flex: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.balbutton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color:darkorange;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #999;
+  margin-left: 400px;
+  }
+  .balbutton:hover {background-color: darkcyan}
+  .balbutton:active {
+  background-color: darkorange;
+  box-shadow: 0 5px darkgray;
+  transform: translateY(4px);
+  }
+
+
+  
+.tbutton {
+  display: inline-block;
+  padding: 7px 9px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px lightblue;
+  
+  }
+  .tbutton:hover {background-color: purple}
+  .tbutton:active {
+  background-color:blue;
+  box-shadow: 0 5px purple;
+  transform: translateY(4px);
+  }
+
+
+
+    
+.tabutton {
+  display: inline-block;
+  padding: 7px 9px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: green;
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px lightblue;
+  
+  }
+
+/*
+.colinput {
+  display: flex;
+  float: left;
+  width: fit-content;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: none;
+  background-color: #3CBC8D;
+  color: black;
+  margin-left: 10px;
+}
+*/
+

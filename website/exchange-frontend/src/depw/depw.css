@@ -1,0 +1,299 @@
+body {
+    background-color: #e9ebf0;
+    font-family: Helvetica, Arial;
+   }
+   .header {
+    background-color: #0093d5;
+    padding: 10px;
+   }
+   .header h1 {
+    color: #fff;
+   }
+   
+
+   
+
+   .wrapper {
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    height: 300px;
+    overflow: auto;
+   }
+   .wrapper p {
+    font-style: italic;
+    color: #666;
+   }
+   .wrapper label {
+    display: block;
+   }
+   .amount-input {
+    margin-bottom: 10px;
+    padding: 3px 6px;
+   }
+   
+   .wrapper select {
+    display: block;
+   }
+   .button {
+    margin: 10px 2px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: #0093d5;
+    border: none;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: small;
+   }
+   .button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+   }
+
+   .wrapper hr {
+    margin: 40px auto;
+   }
+
+   
+   @media only screen and (min-width: 1400px) {
+    .wrapper {
+    width: 50%;
+    }
+    .wrapper input {
+    width: 600px;
+    }
+   }
+   
+   
+   @media only screen and (max-width: 1399px) and (min-width: 750px) {
+    .wrapper {
+    width: 75%;
+    }
+    .wrapper input {
+    width: 400px;
+    }
+   }
+
+
+   .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+   
+   .wrapper .smaller-input {
+    width: 30%;
+    font-size: 12px;
+    margin: 0px;
+  }
+  .wrapper .inline {
+      float: left;
+      margin: 5px;
+      position: relative;
+      top: -45px;
+  }
+
+  .Calculator{
+      padding: 20px;
+      height:100 px;
+
+  }
+  
+  .Calculator .outputpar{
+    font: 200px;
+    position: relative;
+    top:-15px;
+    left:20px;
+
+  }
+
+  .forDD{
+    background-color: aliceblue;
+    width: 50%;
+    display:inline-block;
+  }
+  .DDbuttons{
+    display: inline-block;
+    width: 50%;
+    background-color: blue;
+  }
+
+  
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+.table-wrapper{
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+height: 40%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: antiquewhite;
+}
+
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.fl-table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+For Button
+*/
+
+.dropbtn {
+background-color: inherit;
+color: white;
+  padding: 10px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  height: fit-content;
+  margin-left: 10px;
+  margin-right: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:inherit;
+  opacity: 0.5;
+}
+
+
+.todisp{
+  float: left;
+  border:2px green dotted; 
+  box-shadow: 5px 10px;
+  margin-left: 20px;
+  background-color: white;
+  width: 800px;
+  
+  background-color:bisque;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 12px 20px;
+
+}
+
+.outer{
+display: flex;
+flex-wrap:wrap;
+flex-direction:column;
+
+}
+
+
+
+.wrapper2 {
+  border: 2px dotted rgb(96, 139, 168);
+  margin-left: 150px;
+  width: 80%;
+}
+.box {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin:-10px;
+  flex:100%;
+  
+}
+.box>* {
+  flex: 1 1 160px;
+  margin: 50px;
+  min-width: 300px;
+  
+  border: 2px dotted blue;
+}
+
+@media (max-width: 600px) {
+  .todisp {
+    flex: 100%;
+  }
+}
+/*
+.colinput {
+  display: flex;
+  float: left;
+  width: fit-content;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: none;
+  background-color: #3CBC8D;
+  color: black;
+  margin-left: 10px;
+}
+*/

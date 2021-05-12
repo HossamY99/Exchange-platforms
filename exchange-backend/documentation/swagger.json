@@ -1,0 +1,551 @@
+{
+  "paths": {
+    "/exchangeRate": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rates"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transaction": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/InputTransaction"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Transaction"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionSchema(many=True)"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/UserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/authentication": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/UserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Token"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/exchangeRate/graph": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/RatesGraphRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RatesGraphResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/exchangeRate/insights": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RatesInsightsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transactions/insights": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionsInsightsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/balance": {
+      "put": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/UpdateBalanceSchema"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BalanceResponseSchema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/AuthorizationToken"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BalanceResponseSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/trades": {
+      "post": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/TradeRequestSchema"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TradeResponseSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/makeTrade": {
+      "post": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "body",
+            "required": true,
+            "name": "body",
+            "schema": {
+              "$ref": "#/components/schemas/MakeTradeRequestSchema"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BalanceResponseSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "Exchange API",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.2",
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {},
+          "user_name": {}
+        }
+      },
+      "Transaction": {
+        "type": "object",
+        "properties": {
+          "id": {},
+          "added_date": {},
+          "usd_amount": {},
+          "lbp_amount": {},
+          "usd_to_lbp": {},
+          "user_id": {}
+        }
+      },
+      "InputTransaction": {
+        "type": "object",
+        "properties": {
+          "usd_to_lbp": {
+            "type": "boolean"
+          },
+          "usd_amount": {
+            "type": "number"
+          },
+          "lbp_amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "lbp_amount",
+          "usd_amount",
+          "usd_to_lbp"
+        ]
+      },
+      "Token": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "AuthorizationToken": {
+        "type": "object",
+        "properties": {
+          "Authorization": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Authorization"
+        ]
+      },
+      "Rates": {
+        "type": "object",
+        "properties": {
+          "lbp_to_usd": {
+            "type": "number"
+          },
+          "usd_to_lbp": {
+            "type": "number"
+          }
+        }
+      },
+      "RatesGraphRequest": {
+        "type": "object",
+        "properties": {
+          "days": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "days"
+        ]
+      },
+      "RatesGraphResponse": {
+        "type": "object",
+        "properties": {
+          "buy_rates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "sell_rates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "RatesInsightsResponse": {
+        "type": "object",
+        "properties": {
+          "biggest_selling_rate": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "smallest_buying_rate": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "biggest_buying_rate": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "smallest_selling_rate": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "TransactionsInsightsResponse": {
+        "type": "object",
+        "properties": {
+          "selling_transaction_biggest_rate": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "largest_transaction": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "selling_transaction_smallest_rate": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "buying_transaction_biggest_rate": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "buying_transaction_smallest_rate": {
+            "$ref": "#/components/schemas/Transaction"
+          }
+        }
+      },
+      "UserRequest": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string"
+          },
+          "user_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "password",
+          "user_name"
+        ]
+      },
+      "UpdateBalanceSchema": {
+        "type": "object",
+        "properties": {
+          "usd_amount": {
+            "type": "number"
+          },
+          "lbp_amount": {
+            "type": "number"
+          },
+          "increase": {
+            "type": "boolean"
+          }
+        }
+      },
+      "BalanceResponseSchema": {
+        "type": "object",
+        "properties": {
+          "usd_balance": {
+            "type": "number"
+          },
+          "lbp_balance": {
+            "type": "number"
+          }
+        }
+      },
+      "TradeRequestSchema": {
+        "type": "object",
+        "properties": {
+          "usd_to_lbp": {
+            "type": "boolean"
+          },
+          "rate": {
+            "type": "number"
+          },
+          "usd_amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "rate",
+          "usd_amount",
+          "usd_to_lbp"
+        ]
+      },
+      "TradeResponseSchema": {
+        "type": "object",
+        "properties": {
+          "buyer_user_name": {
+            "type": "string"
+          },
+          "seller_user_name": {
+            "type": "string"
+          },
+          "usd_amount": {
+            "type": "number"
+          },
+          "lbp_amount": {
+            "type": "number"
+          },
+          "buy_usd": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MakeTradeRequestSchema": {
+        "type": "object",
+        "properties": {
+          "trade_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "trade_id"
+        ]
+      }
+    }
+  }
+}
